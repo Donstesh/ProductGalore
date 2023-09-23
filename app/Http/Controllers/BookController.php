@@ -38,6 +38,7 @@ class BookController extends Controller
     {
         $request->validate([
            'title'=>'required',
+           'image'=>'required',
            'price'=>'required',
            'desc'=>'required',
        ]);

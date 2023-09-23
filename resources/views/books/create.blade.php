@@ -25,6 +25,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row mb-1">
+                            <label for="Book Image" class="col-md-4 col-form-label text-md-right">{{ __('Book Image') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror"
+                                    name="title" value="{{ old('image') }}" required autocomplete="image" autofocus placeholder = "add image url">
+
+                                @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-1">
                             <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Book Price')
