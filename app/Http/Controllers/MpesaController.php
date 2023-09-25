@@ -41,7 +41,7 @@ class MpesaController extends Controller
         $PartyB=174379;
         $PhoneNumber=$phoneNumber;
         $CallBackURL="https://39a177fa4e25.ngrok.io/api/mpesa/stkpush/response";
-        $AccountReference="Simon's Tech School Payment";
+        $AccountReference="Books Payment";
         $TransactionDesc="lipa Na M-PESA web development";
         $Remarks="Thank for paying!";
         

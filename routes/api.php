@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/mpesa/stkpush/response', [MpesaController::class, 'resdata'])->name('stkpush.response');
+
+Route::resource('products', 'ProductController');
