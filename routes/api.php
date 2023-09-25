@@ -21,3 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/mpesa/stkpush/response', [MpesaController::class, 'resdata'])->name('stkpush.response');
 
 Route::resource('products', 'ProductController');
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::post('login', 'AuthController@login');
+    Route::post('register', 'AuthController@register');
+    Route::middleware('auth:api')->group(function () {
+        Route::get('user', 'AuthController@user');
+        Route::post('logout', 'AuthController@logout');
+    });
+});
